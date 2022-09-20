@@ -1,0 +1,21 @@
+{
+  "name": "flexy-init",
+  "version": "1.0.0",
+  "description": "Provides the flexy-init command.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flexy-design/flexy-init.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flexy-design/flexy-init/issues"
+  },
+  "homepage": "https://github.com/flexy-design/flexy-init#readme",
+  "bin": {
+    "flexy-init": "bin/flexy-init.js"
+  }
+}
