@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Provides the flexy-init command.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && ([ -d test-e2e ] || mkdir test-e2e) && cd test-e2e && node ../bin/flexy-login",
+    "build": "rm -rf dist && tsc",
+    "release": "npm run build && release-it"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flexy-design/flexy-init.git"
   },
   "keywords": [],
+  "author": "flexy-design",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/flexy-design/flexy-init/issues"
@@ -17,5 +20,15 @@
   "homepage": "https://github.com/flexy-design/flexy-init#readme",
   "bin": {
     "flexy-init": "bin/flexy-init.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.1",
+    "@types/node": "^18.7.20",
+    "release-it": "^15.4.2"
   }
 }
